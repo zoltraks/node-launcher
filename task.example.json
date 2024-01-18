@@ -1,0 +1,9 @@
+[
+    {
+        "name": "default",
+        "program": "echo",
+        "arguments": [
+            "EXIT"
+        ]
+    }
+]

@@ -1,0 +1,12 @@
+#textHistory {
+    height: 15em;
+}
+
+#page {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.font-mono {
+    font-family: 'Courier New', monospace;
+}
