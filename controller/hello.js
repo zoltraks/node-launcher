@@ -11,6 +11,10 @@ class Hello {
                 time: time,
             },
         }
+        const debug = process.env.DEBUG === 'true'
+        if (debug) {
+            common.info(JSON.stringify(result, null, 2))
+        }
         return result
     }
 
