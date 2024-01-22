@@ -192,7 +192,7 @@ class Utils {
             return singular
         }
         if (number === 1) {
-            return singluar
+            return singular
         }
         if (genitive) {
             const hundred = number % 100
