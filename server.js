@@ -75,9 +75,9 @@ dotenv.config({ path: 'server.env' })
 
 process.env.DEBUG = !!process.env.DEBUG
 process.env.EXAMPLE = !!process.env.EXAMPLE
-process.env.DISABLE_ANSI = !!process.env.DISABLE_ANSI
+process.env.DISABLE_ANSI = utils.stringToBoolean(process.env.DISABLE_ANSI)
 
-if (process.env.DISABLE_ANSI === 'true') {
+if (process.env.DISABLE_ANSI === true) {
 	ansi.enabled = false
 }
 
