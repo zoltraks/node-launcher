@@ -23,7 +23,7 @@ class Task {
         if (task.jobs > 0) {
             result = {
                 body: {
-                    'error': 'Job already running'
+                    'error': 'Job already running',
                 },
                 code: 400,
             }
@@ -35,7 +35,7 @@ class Task {
             result = {
                 body: {
                     'job': job.guid,
-                    'time': utils.now()
+                    'time': utils.now(),
                 },
                 code: 200,
             }
