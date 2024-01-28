@@ -73,11 +73,11 @@ const swaggerOptions = {
 
 dotenv.config({ path: 'server.env' })
 
-process.env.DEBUG = !!process.env.DEBUG
-process.env.EXAMPLE = !!process.env.EXAMPLE
-process.env.DISABLE_ANSI = utils.stringToBoolean(process.env.DISABLE_ANSI)
+process.env.DEBUG = utils.stringToBoolean(process.env.DEBUG)
+process.env.EXAMPLE = utils.stringToBoolean(process.env.EXAMPLE)
+process.env.NO_COLOR = process.env.NO_COLOR === '' ? true : utils.stringToBoolean(process.env.NO_COLOR)
 
-if (process.env.DISABLE_ANSI === true) {
+if (process.env.NO_COLOR !== 'true') {
 	ansi.enabled = false
 }
 
