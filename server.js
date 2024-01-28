@@ -122,13 +122,17 @@ if (setup.readTaskConfiguration(process.env.TASK_FILE)) {
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions)
 
+const helmetOptions = {
+	contentSecurityPolicy: false,
+}
+
 const app = express()
 
 app.use(express.json())
 
-app.use(helmet({
-	contentSecurityPolicy: false,
-}))
+app.use((err, _req, res, _next) => res.status(400).json({ error: err.message }))
+
+app.use(helmet(helmetOptions))
 
 app.use(cors())
 
