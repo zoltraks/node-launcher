@@ -1,6 +1,16 @@
 # TASK LAUNCHER
 
-## Authors
+## Description
+
+This is a service written in JavaScript to manage configurable tasks over HTTP.
+
+Provides operations to run a configurable task on HTTP request.
+
+Stores execution history and provides a console stream of running tasks.
+
+Secured using JWT.
+
+## Author
 
 Filip Golewski
 
